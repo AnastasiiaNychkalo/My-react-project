@@ -7,9 +7,9 @@ import NotesManager from './components/Task_4/NotesManager';
 const App: React.FC = () => {
   const[searchQuery, setSearchQuery] = useState<string>("");
 
-  const handleSearch: (query: string) => void = (query) => {
-    setSearchQuery(query);
-  }
+  // const handleSearch: (query: string) => void = (query) => {
+  //   setSearchQuery(query);
+  // }
 
   return (
     <>
@@ -18,8 +18,8 @@ const App: React.FC = () => {
 
 
 
-      <Header onSearch={handleSearch}/>
-      <NotesManager query={searchQuery}/>
+      <Header onSearch={setSearchQuery}/>
+      <NotesManager searchQuery={searchQuery} />
     </>
   )
 }

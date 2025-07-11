@@ -2,13 +2,12 @@ import React, {useState} from "react";
 
 interface HeaderProps {
    onSearch: (query: string) => void;
- }
+}
 
 const Header: React.FC<HeaderProps> =  ({ onSearch }) => {
    const [input, setInput] = useState<string>("");
 
    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-      e.preventDefault();
       const value = e.target.value;
 
       setInput(value);
